@@ -7,3 +7,4 @@ com/bookvault/model/Cliente.class
 com/bookvault/model/Multa.class
 com/bookvault/service/LivroService.class
 com/bookvault/model/Emprestimo.class
+com/bookvault/Main.class
