@@ -1,4 +1,4 @@
-package com.bookvault;
+package com.bookvault.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
