@@ -3,3 +3,7 @@
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/model/Funcionario.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/model/Livro.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/model/Multa.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/repository/GenericDAO.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/ClienteService.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/EmprestimoService.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/LivroService.java

@@ -2,7 +2,7 @@ package com.bookvault.repository;
 import java.util.List;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.EntityManager;
-import com.practice.model.*;
+import com.bookvault.model.*;
 
 public class GenericDAO {
 

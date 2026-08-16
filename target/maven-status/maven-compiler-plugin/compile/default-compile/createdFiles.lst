@@ -1,5 +1,9 @@
-com/bookvault/Emprestimo.class
-com/bookvault/Funcionario.class
-com/bookvault/Livro.class
-com/bookvault/Cliente.class
-com/bookvault/Multa.class
+com/bookvault/model/Funcionario.class
+com/bookvault/service/EmprestimoService.class
+com/bookvault/repository/GenericDAO.class
+com/bookvault/service/ClienteService.class
+com/bookvault/model/Livro.class
+com/bookvault/model/Cliente.class
+com/bookvault/model/Multa.class
+com/bookvault/service/LivroService.class
+com/bookvault/model/Emprestimo.class
