@@ -16,18 +16,16 @@ public class Livro{
 	boolean disponivel = true;
 	@Basic
 	String titulo,autor,genero,isbn;
-	double valor_para_emprestimo;
 
 	public Livro(){
 
 	}
 
-	public Livro(String titulo, String autor, String genero,String isbn, double valor_para_emprestimo){
+	public Livro(String titulo, String autor, String genero,String isbn){
 		this.titulo = titulo;
 		this.autor = autor;
 		this.genero = genero;
 		this.isbn = isbn;
-		this.valor_para_emprestimo = valor_para_emprestimo;
 	}
 	
 	public long getId(){return id;}
@@ -39,8 +37,6 @@ public class Livro{
         public void setGenero(String genero) {this.genero = genero;}
 	public String getIsbn(){return isbn;}
         public void setIsbn(String isbn) {this.isbn = isbn;}
-	public double getValorEmprestimo(){return valor_para_emprestimo;}
-        public void setValorEmprestimo(double valor_para_emprestimo) {this.valor_para_emprestimo = valor_para_emprestimo;}
 	public boolean getDisponivel() {return disponivel;}
 	public void setDisponivel(boolean disponivel) { this.disponivel = disponivel; }
 }

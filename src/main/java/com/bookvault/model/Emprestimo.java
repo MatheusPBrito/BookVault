@@ -28,10 +28,10 @@ public class Emprestimo{
 			
 	}
 
-	public Emprestimo(Cliente cliente, Livro livro, String situacao){
+	public Emprestimo(Cliente cliente, Livro livro, Funcionario responsavel,String situacao){
 		this.cliente = cliente;
 		this.livro = livro;
-		//this.responsavel = responsavel;
+		this.responsavel = responsavel;
 		this.situacao = situacao;
 	}
 

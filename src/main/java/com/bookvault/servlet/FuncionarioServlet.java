@@ -1,7 +1,7 @@
 package com.bookvault.servlet;
 
-import com.bookvault.model.Cliente;
-import com.bookvault.service.ClienteService;
+import com.bookvault.model.Funcionario;
+import com.bookvault.service.FuncionarioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet("/cliente")
-public class ClienteServlet extends HttpServlet{
+@WebServlet("/funcionario")
+public class FuncionarioServlet extends HttpServlet{
 
 	ObjectMapper mapper = new ObjectMapper();
 	@Override
@@ -21,14 +21,14 @@ public class ClienteServlet extends HttpServlet{
 		String json;
 		if(req.getParameter("id") != null){
 			long id = Long.parseLong(req.getParameter("id"));
-			Cliente cliente = ClienteService.consultar(id);
-			json = mapper.writeValueAsString(cliente);
+			Funcionario funcionario = FuncionarioService.consultar(id);
+			json = mapper.writeValueAsString(funcionario);
 			PrintWriter out = res.getWriter();
 			out.println(json);
 		}
 		else {
-			List<Cliente> clientes = ClienteService.consultarTodos();
-			json = mapper.writeValueAsString(clientes);
+			List<Funcionario> funcionarios = FuncionarioService.consultarTodos();
+			json = mapper.writeValueAsString(funcionarios);
 			PrintWriter out = res.getWriter();
 			out.println(json);
 		}
@@ -38,12 +38,14 @@ public class ClienteServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException {
 		String nome = req.getParameter("nome");
-		String email = req.getParameter("email");
-		String telefone = req.getParameter("telefone");
-		Cliente cliente = new Cliente(nome,email,telefone);	
-		ClienteService.registrar(cliente);
+		String cidade = req.getParameter("cidade");
+		String bairro = req.getParameter("bairro");
+		String rua = req.getParameter("rua");
+		int casa = Integer.parseInt(req.getParameter("casa"));
+		String cpf = req.getParameter("cpf");
+		Funcionario funcionario = new Funcionario(nome,cidade,bairro,rua,casa,cpf);	
+		FuncionarioService.registrar(funcionario);
 		PrintWriter out = res.getWriter();
-		out.println("ID " + cliente.getId() + " Cliente " + cliente.getNome() + " criado com sucesso");
+		out.println("ID " + funcionario.getId() + " Funcionario " + funcionario.getNome() + " criado com sucesso");
 	}
-
 }
