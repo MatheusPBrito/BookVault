@@ -18,7 +18,7 @@ public class MultaService{
 		EntityManager em = emf.createEntityManager();
 		GenericDAO dao = new GenericDAO(em);
 		em.getTransaction().begin();
-		dao.create(emprestimo);
+		dao.create(multa);
 		em.getTransaction().commit();
 		em.close();
 		emf.close();
@@ -28,7 +28,7 @@ public class MultaService{
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
 		EntityManager em = emf.createEntityManager();
 		GenericDAO dao = new GenericDAO(em);
-		Multa multa = dao.find(Emprestimo.class,id);	
+		Multa multa = dao.find(Multa.class,id);	
 		em.close();
 		emf.close();	
 		return multa;
@@ -39,7 +39,7 @@ public class MultaService{
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
 		EntityManager em = emf.createEntityManager();
 		GenericDAO dao = new GenericDAO(em);
-		List<Multa> multas = dao.findAll(Emprestimo.class);	
+		List<Multa> multas = dao.findAll(Multa.class);	
 		em.close();
 		emf.close();	
 		return multas;

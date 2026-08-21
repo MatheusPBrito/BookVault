@@ -26,7 +26,7 @@ public class Multa{
 	
 	}
 
-	public Multa(Cliente cliente, Livro livro, Funcionario responsavel,double valor_da_multa, String situacao){
+	public Multa(Cliente cliente, Livro livro, Funcionario responsavel){
 		this.cliente = cliente;
 		this.livro = livro;
 		this.responsavel =  responsavel;
