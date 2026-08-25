@@ -14,7 +14,7 @@ public class Emprestimo{
 	@GeneratedValue
 	long id;
 	@Basic
-	String situacao;
+	String situacao = "pendente";
 	LocalDate dataEmprestimo = LocalDate.now(), 
 		  dataDevolucao = dataEmprestimo.plusDays(30);
 	@ManyToOne
@@ -28,11 +28,10 @@ public class Emprestimo{
 			
 	}
 
-	public Emprestimo(Cliente cliente, Livro livro, Funcionario responsavel,String situacao){
+	public Emprestimo(Cliente cliente, Livro livro, Funcionario responsavel){
 		this.cliente = cliente;
 		this.livro = livro;
 		this.responsavel = responsavel;
-		this.situacao = situacao;
 	}
 
 	public Cliente getCliente(){return cliente;}

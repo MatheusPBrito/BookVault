@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 
 @Entity
 public class Cliente{
@@ -13,7 +14,9 @@ public class Cliente{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	long id;
 	@Basic
-	String nome,email,telefone,reputacao;
+	String nome,telefone,reputacao;
+	@Column (unique = true, nullable = false)
+	String email;
 
 	public Cliente(){
 		reputacao = "boa";

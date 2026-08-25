@@ -32,6 +32,16 @@ public class ClienteService{
 		return cliente;
 	}
 
+	public static Cliente consultar(String campo, String valor){
+                EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
+                EntityManager em = emf.createEntityManager();
+                GenericDAO dao = new GenericDAO(em);
+                Cliente cliente = dao.find(Cliente.class,campo,valor);
+                em.close();
+                emf.close();
+                return cliente;
+        }
+
 	public static List<Cliente> consultarTodos(){
                 EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
                 EntityManager em = emf.createEntityManager();

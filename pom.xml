@@ -57,6 +57,12 @@
         </dependency>
 
 	<dependency>
+	    <groupId>com.fasterxml.jackson.datatype</groupId>
+	    <artifactId>jackson-datatype-jsr310</artifactId>
+	    <version>${jackson.version}</version>
+	</dependency>
+
+	<dependency>
 	    <groupId>org.mindrot</groupId>
 	    <artifactId>jbcrypt</artifactId>
 	    <version>0.4</version>
@@ -70,14 +76,12 @@
 
         <plugins>
 
-            <!-- Compilador Java -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.1</version>
             </plugin>
 
-            <!-- Geração do WAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
