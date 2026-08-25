@@ -1,6 +1,6 @@
 package com.bookvault.service;
 import com.bookvault.repository.GenericDAO;
-import com.bookvault.model.Emprestimo;
+import com.bookvault.model.*;
 import jakarta.persistence.*;
 import java.time.*;
 import java.util.List;
@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class EmprestimoService{
 	
-	static Scanner input = new Scanner(System.in);
 	static Cliente cliente;
 	static Livro livro;
 	static Funcionario responsavel;
