@@ -5,6 +5,8 @@ import java.util.Scanner;
 import jakarta.persistence.*;
 import java.util.List;
 import java.util.ArrayList;
+import org.mindrot.jbcrypt.BCrypt;
+
 
 public class FuncionarioService{
         
@@ -13,6 +15,7 @@ public class FuncionarioService{
                 EntityManager em = emf.createEntityManager();
                 GenericDAO dao = new GenericDAO(em);
                 em.getTransaction().begin();
+		funcionario.setSenha(BCrypt.hashpw(funcionario.getSenha(), BCrypt.gensalt()));
                 dao.create(funcionario);
                 em.getTransaction().commit();
                 em.close();
@@ -24,6 +27,16 @@ public class FuncionarioService{
                 EntityManager em = emf.createEntityManager();
                 GenericDAO dao = new GenericDAO(em);
 		Funcionario funcionario = dao.find(Funcionario.class,id);
+                em.close();
+                emf.close();
+		return funcionario;
+	}
+
+	public static Funcionario consultar(String campo, String valor){
+                EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
+                EntityManager em = emf.createEntityManager();
+                GenericDAO dao = new GenericDAO(em);
+		Funcionario funcionario = dao.find(Funcionario.class,campo,valor);
                 em.close();
                 emf.close();
 		return funcionario;

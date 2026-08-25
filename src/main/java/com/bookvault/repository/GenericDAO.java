@@ -20,6 +20,18 @@ public class GenericDAO {
 	public <E> E find(Class<E> entityClass,long id){
 		return em.find(entityClass, id);
 	}
+
+	public <E> E find(Class<E> entityClass, String campo, Object valor) {
+	    String command = "SELECT e FROM " + entityClass.getSimpleName()
+		    + " e WHERE e." + campo + " = :valor";
+
+	    TypedQuery<E> query = em.createQuery(command, entityClass);
+	    query.setParameter("valor", valor);
+
+	    List<E> results = query.setMaxResults(1).getResultList();
+
+	    return results.isEmpty() ? null : results.get(0);
+	}
 	
 	public <E> List<E> findAll(Class<E> entityClass){
 		TypedQuery<E> query = em.createQuery("SELECT e FROM " + entityClass.getSimpleName() + " e", entityClass);
