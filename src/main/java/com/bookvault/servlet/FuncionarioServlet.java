@@ -43,7 +43,9 @@ public class FuncionarioServlet extends HttpServlet{
 		String rua = req.getParameter("rua");
 		int casa = Integer.parseInt(req.getParameter("casa"));
 		String cpf = req.getParameter("cpf");
-		Funcionario funcionario = new Funcionario(nome,cidade,bairro,rua,casa,cpf);	
+		String email = req.getParameter("email");
+		String senha = req.getParameter("senha");
+		Funcionario funcionario = new Funcionario(nome,cidade,bairro,rua,casa,cpf,email,senha);	
 		FuncionarioService.registrar(funcionario);
 		PrintWriter out = res.getWriter();
 		out.println("ID " + funcionario.getId() + " Funcionario " + funcionario.getNome() + " criado com sucesso");

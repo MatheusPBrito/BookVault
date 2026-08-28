@@ -1,4 +1,3 @@
-/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/Main.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/model/Cliente.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/model/Emprestimo.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/model/Funcionario.java
@@ -7,4 +6,11 @@
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/repository/GenericDAO.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/ClienteService.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/EmprestimoService.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/FuncionarioService.java
 /home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/LivroService.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/service/MultaService.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/servlet/ClienteServlet.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/servlet/EmprestimoServlet.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/servlet/FuncionarioServlet.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/servlet/LivroServlet.java
+/home/yohan/Documents/Programacao/Java/Repos/BookVault/src/main/java/com/bookvault/servlet/LoginServlet.java
